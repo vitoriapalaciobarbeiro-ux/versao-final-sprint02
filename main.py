@@ -44,9 +44,6 @@ def validar_senha(senha):
     if tem_numero == False:
       return False
 
-    if senha.strip() == "":
-        return False
-
     return True
 
 #CADASTRAR
