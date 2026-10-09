@@ -24,8 +24,12 @@ def validar_senha(senha):
     tem_maiusculo = False
     tem_minusculo = False
     tem_numero = False
+    tem_caractere = False
 
     for caractere in senha:
+      if caractere.isalpha():
+         tem_caractere = True
+    
       if caractere.isupper():
           tem_maiusculo = True
 
@@ -35,6 +39,8 @@ def validar_senha(senha):
       if caractere.isdigit():
           tem_numero = True
 
+    
+
     if tem_maiusculo == False:
       return False
 
@@ -42,6 +48,9 @@ def validar_senha(senha):
       return False
 
     if tem_numero == False:
+      return False
+
+    if tem_caractere == False:
       return False
 
     return True
