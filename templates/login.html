@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+
+<body class="pagina-login">
+    <main>
+        <div class="esquerda">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+                <p>Seu trabalho, seu controle</p>
+            </div>
+        </div>
+
+        <div class="direita">
+            <div class="formulario">
+                <div class="logo_centro">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="">
+                </div>
+
+                <h1>Bem-vindo de volta!</h1>
+
+                <p>Faça seu login para acessar sua conta do meu salário</p>
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <div class="flash-messages">
+                    {%for category, message in messages %}
+                    <div class="flash {{category}}">{{message}}</div>
+                    {%endfor%}
+                </div>
+                {%endif%}
+                {%endwith%}
+
+                <form action="{{ url_for('entrar') }}" method="post">
+                    <label>E-mail</label>
+                    <input type="email" maxlength="254" name="email" required>
+
+                    <label>Senha</label>
+                    <input type="password" name="senha" required>
+
+                    <button>ENTRAR</button>
+                </form>
+
+                <div class="cadastre">
+                    <h2>Não possui conta?</h2>
+                    <a href="{{ url_for('cadastro') }}">CADASTRE-SE</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <title>Editar perfil</title>
+</head>
+<body class="pagina-editar-perfil">
+    <div class="header">
+        <img class="logo_branca" src="{{ url_for('static', filename='img/logo_branca.png') }}" alt="Logo Branca">
+
+        <div class="inicio_relatorio_previsao">
+            <a href="{{ url_for('dashboard') }}">Início</a>
+            <p>Relatório</p>
+            <p>Previsão</p>
+        </div>
+
+        <div class="icone_e_nome">
+            <div class="icone_user"></div>
+            <div class="nome_user">Olá, {{ nome }}</div>
+            <a href="{{ url_for('logout') }}" class="logout"><img src="{{ url_for('static', filename='img/logout.png') }}" alt="Símbolo da logo"></a>
+        </div>
+    </div>
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="flash-messages">
+                {%for category, message in messages %}
+                <div class="flash {{category}}">{{message}}</div>
+                {%endfor%}
+            </div>
+            {%endif%}
+        {%endwith%}
+        <div class="icone_user_grande"><img src="{{ url_for('static', filename='img/user.png') }}" alt="Foto de usuário"></div>
+
+        <form action="{{ url_for('editar') }}" method="post">
+            <div class="campos">
+                <div class="coluna_esquerda">
+                    <label>Nome</label>
+                    <input name="nome" type="text" maxlength="254" value="{{ usuario[1] }}" required>
+
+                    <label>E-mail</label>
+                    <input name="email" type="email" maxlength="254" value="{{ usuario[2] }}" required>
+
+                    <label>Senha</label>
+                    <a href="{{ url_for('editar_senha') }}" class="botao-senha">Editar senha</a>
+                </div>
+
+                <div class="coluna_direita">
+                    <label>Valor diário padrão</label>
+                    <input name="valor_padrao" type="number" min="0" step="0.01" value="{{ usuario[4] }}" required>
+
+                    <label>Valor diário excepcional</label>
+                    <input name="valor_excepcional" type="number" min="0" step="0.01" value="{{ usuario[5] }}" required>
+
+                    <label>Valor por pacote</label>
+                    <input name="valor_pacotes" type="number" min="0" step="0.01" value="{{ usuario[6] }}" required>
+                </div>
+            </div>
+            <button type="submit">ATUALIZAR</button>
+        </form>
+    </div>
+
+
+    <div class="menu">
+        <a class="inicio" href="{{ url_for('dashboard') }}">
+            <img src="{{ url_for('static', filename='img/casinha.png') }}">
+            <p>Início</p>
+        </a>
+
+
+        <div>
+            <img class="relatorios" src="{{ url_for('static', filename='img/setas.png') }}">
+            <p>Relatórios</p>
+        </div>
+
+
+        <div>
+            <img class="previsoes" src="{{ url_for('static', filename='img/previsoes_logo.png') }}">
+            <p>Previsões</p>
+        </div>
+    </div>
+
+</body>
+</html>

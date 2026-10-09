@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <title>LandingPage</title>
+</head>
+
+
+<body class="pagina-index">
+    <div class="header">
+        <img src="{{ url_for('static', filename='img/logo_branca.png') }}" alt="">
+
+
+        <a href="{{ url_for('login') }}" class="entrar">Entrar</a>
+
+
+        <a  href="{{ url_for('cadastro') }}" class="cadastrar">
+            <h3>Cadastrar</h3>
+        </a>
+    </div>
+
+
+    <div class="parte_1">
+        <div class="conteudo">
+            <h2>CONTROLE FINANCEIRO</h2>
+            <h1>Organize seus ganhos.</h1>
+            <h3>Planeje seu futuro.</h3>
+
+
+            <p>
+                O Meu Salário é um sistema simples e seguro para você registrar suas receitas, despesas e acompanhar seu desempenho financeiro.
+            </p>
+
+
+             <div class="botoes">
+
+
+            <a href="{{ url_for('cadastro') }}" class="cadastrar_agora">
+                <h5>Cadastrar Agora</h5>
+            </a>
+
+
+            <a href="{{ url_for('login') }}" class="entrar_agora">
+                <h6>Entrar</h6>
+            </a>
+        </div>
+    </div>
+
+
+        <div class="container-grafico">
+
+
+            <div class="header_grafico">
+                <img class="logo_branca_grafico" src="{{ url_for('static', filename='img/logo_branca.png') }}" alt="">
+
+
+                <div class="icone_e_nome">
+                    <div class="icone_user"></div>
+                    <div class="nome_user">Olá, Maria Luiza</div>
+                </div>
+
+            </div>
+
+
+            <div class="receita_despesa_saldo">
+
+
+                <div class="receita">
+
+
+                    <div class="topo_card">
+                        <div class="icone_receita"></div>
+                        <div class="nome_card">Receitas</div>
+                    </div>
+
+
+                    <div class="RS">R$ 3.450,00</div>
+
+
+                    <div class="descricao_card">↗ +12% em relação ao mês anterior</div>
+
+
+                </div>
+
+
+                <div class="despesa">
+                    <div class="topo_card">
+                        <div class="icone_despesa"></div>
+                        <div class="nome_card">Despesas</div>
+                    </div>
+
+
+                    <div class="RS">R$ 1.980,00</div>
+
+
+                    <div class="descricao_card">↘ -8% em relação ao mês anterior</div>
+
+
+                </div>
+
+
+                <div class="saldo">
+                    <div class="topo_card">
+                        <div class="icone_receita"></div>
+                        <div class="nome_card">Saldo</div>
+                    </div>
+
+
+                    <div class="RS">R$ 1.470,00</div>
+
+
+                    <div class="descricao_card">↗ +20% em relação ao mês anterior</div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="grafico_1">
+                <img src="{{ url_for('static', filename='img/grafico_landpage.png') }}" alt="">
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <div class="parte_2">
+
+
+            <p class="titulo_pt2">FUNCIONALIDADES</p>
+            <h1>Tudo o que você precisa, em um só lugar</h1>
+            <h3>Cadastre, acompanhe e visualize suas informações de forma prática e segura.</h3>
+
+
+            <div class="quadrados">
+
+
+                <div class="quadrado">
+                    <div class="textos_quadrado">RECEITAS</div>
+                    <div class="textos_secundario_quadrado">Registre seus ganhos com data, valor e descrição para acompanhar melhor sua renda e entender sua evolução financeira ao longo do mês.</div>
+                </div>
+
+
+                <div class="quadrado">
+                    <div class="textos_quadrado">DESPESAS</div>
+                    <div class="textos_secundario_quadrado">Organize seus gastos por categoria, valor e descrição para visualizar com clareza onde seu dinheiro está sendo utilizado.</div>
+                </div>
+
+
+                <div class="quadrado">
+                    <div class="textos_quadrado">CÁLCULO DE GANHOS</div>
+                    <div class="textos_secundario_quadrado">Veja seu ganho diário, os adicionais por pacotes coletados e o valor total acumulado em cada período de trabalho.</div>
+                </div>
+
+
+                <div class="quadrado">
+                    <div class="textos_quadrado">PROJEÇÕES</div>
+                    <div class="textos_secundario_quadrado">Consulte sua média mensal, acompanhe sua evolução e veja estimativas dos seus ganhos futuros com base nos dados registrados.</div>
+                </div>
+
+
+                <div class="quadrado">
+                    <div class="textos_quadrado">RELATÓRIOS</div>
+                    <div class="textos_secundario_quadrado">Acompanhe seu desempenho através de gráficos, resumos e informações detalhadas sobre seus ganhos, despesas e resultados.</div>
+                </div>
+
+
+                <div class="quadrado">
+                    <div class="textos_quadrado">CONTA E USUÁRIO</div>
+                    <div class="textos_secundario_quadrado">Edite seus dados pessoais, atualize suas informações, altere configurações e gerencie sua conta de forma simples e segura.</div>
+                </div>
+            </div>
+
+
+            <h1 class="texto2_pt2">Tenha acesso aos seus históricos</h1>
+            <h3>Analise seu progresso a longo prazo, de forma clara e eficiente.</h3>
+
+
+            <div class="historico_de_lancamentos" >
+                <img src="{{ url_for('static', filename='img/historico_de_lancamentos.png') }}" alt="">
+            </div>
+
+
+            <h1 class="texto3_pt2">Analise resultados, obtenha previsões!</h1>
+            <h3>Preveja seus saldos futuros a partir de estimativas reais, a partir das suas informações anteriores</h3>
+
+
+            <div class="previsoes" >
+                <img src="{{ url_for('static', filename='img/previsoes.png') }}" alt="">
+            </div>
+
+
+            <h1 class="texto_fim_pt2">Os melhores benefícios em um único lugar</h1>
+
+
+            <div class="quadrados_azul">
+
+
+                <div class="quadrado_azul">
+                    <div class="textos_quadrados_azul">ORGANIZAÇÃO</div>
+                    <div class="textos_secundario_quadrados_azul">Registre seus ganhos com data, valor e descrição para acompanhar melhor sua renda e entender sua evolução financeira ao longo do mês.</div>
+                </div>
+
+
+                <div class="quadrado_azul">
+                    <div class="textos_quadrados_azul">CONTROLE</div>
+                    <div class="textos_secundario_quadrados_azul">Organize seus gastos por categoria, valor e descrição para visualizar com clareza onde seu dinheiro está sendo utilizado.</div>
+                </div>
+
+
+                <div class="quadrado_azul">
+                    <div class="textos_quadrados_azul">VISIBILIDADE</div>
+                    <div class="textos_secundario_quadrados_azul">Veja seu ganho diário, os adicionais por pacotes coletados e o valor total acumulado em cada período de trabalho.</div>
+                </div>
+
+
+                <div class="quadrado_azul">
+                    <div class="textos_quadrados_azul">PLANEJAMENTO</div>
+                    <div class="textos_secundario_quadrados_azul">Consulte sua média mensal, acompanhe sua evolução e veja estimativas dos seus ganhos futuros com base nos dados registrados.</div>
+                </div>
+
+
+                <div class="quadrado_azul">
+                    <div class="textos_quadrados_azul">PRATICIDADE</div>
+                    <div class="textos_secundario_quadrados_azul">Acompanhe seu desempenho através de gráficos, resumos e informações detalhadas sobre seus ganhos, despesas e resultados.</div>
+                </div>
+
+
+            </div>
+
+
+            <footer>
+                <p>meusalario@gmail.com</p>
+            </footer>
+
+
+
+
+
+
+    </div>
+</body>
+</html>

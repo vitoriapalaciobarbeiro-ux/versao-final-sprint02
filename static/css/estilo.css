@@ -1,0 +1,1735 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --principal: #0D7C4E;
+    --secundaria: #16A34A;
+    --fundo_principal: #22C55E;
+    --suave: #DDF7E7;
+    --fundo_claro:  #F7FAF8;
+    --branco: #FFFFFF;
+    --neutro: #1F2937;
+    --neutro_secundario: #6B7280;
+    --barra_grafico: #7DD4AF;
+    --cards_despesas: #ED4D5D;
+    --fundo_cards: #F2CDD2;
+    --cards_beneficios: #247FDD;
+    --fundo_beneficios: #D4E7F8;
+    --preto: #000000;
+    --fundo_cards1: #FFF2F4;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    color: var(--neutro);
+    background: var(--branco);
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* login e cadastro */
+
+.pagina-login main,
+.pagina-cadastro main {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.pagina-login .esquerda,
+.pagina-cadastro .esquerda {
+    width: 50%;
+    min-height: 100vh;
+    background-image: url('../img/imagem_esquerda.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagina-login .logo,
+.pagina-cadastro .logo {
+    text-align: center;
+}
+
+.pagina-login .logo img,
+.pagina-cadastro .logo img {
+    width: 235px;
+}
+
+.pagina-login .logo p,
+.pagina-cadastro .logo p {
+    margin: 3px 0 0;
+    color: var(--principal);
+    font-size: 20px;
+}
+
+.pagina-login .direita,
+.pagina-cadastro .direita {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.pagina-login .formulario,
+.pagina-cadastro .formulario {
+    width: 420px;
+    max-width: 90%;
+    margin-top: 80px;
+    border-radius: 10px;
+}
+
+.pagina-login .logo_centro,
+.pagina-cadastro .logo_centro {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.pagina-login .logo_centro img,
+.pagina-cadastro .logo_centro img {
+    width: 200px;
+    height: auto;
+}
+
+.pagina-login .formulario h1,
+.pagina-cadastro .formulario h1 {
+    text-align: center;
+    color: var(--principal);
+    font-size: 20px;
+    margin: 0;
+}
+
+.pagina-login .direita p,
+.pagina-cadastro .direita p {
+    text-align: center;
+    color: var(--neutro_secundario);
+    font-size: 11px;
+    margin-bottom: 18px;
+}
+
+.pagina-login form,
+.pagina-cadastro form {
+    margin-top: 25px;
+}
+
+.pagina-login label,
+.pagina-cadastro label {
+    display: block;
+    color: var(--principal);
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.pagina-login input,
+.pagina-cadastro input {
+    width: 100%;
+    height: 28px;
+    border: 1px solid var(--neutro_secundario);
+    border-radius: 6px;
+    padding-left: 10px;
+}
+
+.pagina-login button,
+.pagina-cadastro button {
+    width: 100%;
+    height: 28px;
+    margin-top: 13px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--principal);
+    color: var(--branco);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.cadastre {
+    text-align: center;
+}
+
+.cadastre h2 {
+    color: var(--neutro);
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.cadastre a {
+    color: var(--principal);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* header das paginas internas */
+
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: var(--principal);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header .logo_branca {
+    width: 95px;
+    height: auto;
+    margin-left: 16px;
+}
+
+.inicio_relatorio_previsao {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    color: var(--branco);
+    margin-left: auto;
+}
+
+.inicio_relatorio_previsao a,
+.inicio_relatorio_previsao p {
+    color: var(--branco);
+}
+
+.header .icone_e_nome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    margin-right: 25px;
+}
+
+.header .icone_e_nome .icone_user {
+    background-color: var(--branco);
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+}
+
+.header .icone_e_nome .nome_user {
+    color: var(--branco);
+    font-weight: 600;
+    font-size: 9px;
+}
+
+.header .icone_e_nome a {
+}
+
+.logout {
+}
+
+.logout img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    display: block;
+}
+
+/* editar perfil */
+
+.pagina-editar-perfil .container {
+    width: 100%;
+    min-height: 90vh;
+    background-color: var(--fundo_claro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pagina-editar-perfil .icone_user_grande {
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    background-color: var(--principal);
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagina-editar-perfil .icone_user_grande img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.pagina-editar-perfil form {
+    max-width: 90%;
+    margin-top: 25px;
+}
+
+.pagina-editar-perfil .campos {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.pagina-editar-perfil .coluna_esquerda,
+.pagina-editar-perfil .coluna_direita {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagina-editar-perfil label {
+    display: block;
+    color: var(--principal);
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.pagina-editar-perfil input {
+    width: 100%;
+    height: 28px;
+    border: 1px solid var(--neutro_secundario);
+    border-radius: 6px;
+    padding-left: 10px;
+}
+
+.pagina-editar-perfil button {
+    width: 80%;
+    height: 34px;
+    margin-top: 25px;
+    margin-left: 50px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--principal);
+    color: var(--branco);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.botao-senha {
+    width: 100%;
+    height: 28px;
+    border: 1px solid var(--neutro_secundario);
+    border-radius: 6px;
+    color: var(--branco);
+    background-color: var(--principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+/* editar senha */
+
+.pagina-editar-senha .container-senha {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.pagina-editar-senha .container-senha form {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagina-editar-senha .container-senha label {
+    width: 100%;
+    text-align: left;
+    color: var(--principal);
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.pagina-editar-senha .container-senha input {
+    width: 100%;
+    height: 32px;
+    border: 1px solid var(--neutro_secundario);
+    border-radius: 6px;
+    padding-left: 10px;
+}
+
+.pagina-editar-senha .atualizar {
+    width: 100%;
+    height: 34px;
+    margin: 25px 0 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--principal);
+    color: var(--branco);
+    font-weight: 700;
+}
+
+/* menu mobile */
+
+.menu {
+    display: none;
+    justify-content: space-around;
+    background-color: var(--principal);
+    color: var(--branco);
+    text-align: center;
+}
+
+.menu div,
+.menu .inicio {
+    padding: 5px;
+}
+
+.menu img {
+    width: 20px;
+}
+
+.menu p {
+    margin: 0;
+    font-size: 10px;
+}
+
+/* landing page */
+
+.entrar,
+.cadastrar,
+.cadastrar_agora,
+.entrar_agora {
+    text-decoration: none;
+}
+
+.pagina-index .header {
+    width: 100%;
+    height: 70px;
+    background-color: var(--principal);
+    display: flex;
+    align-items: flex-start;
+}
+
+.pagina-index .header img {
+    width: 151px;
+    height: 49px;
+    margin-top: 13px;
+    margin-left: 68px;
+}
+
+.header .entrar {
+    width: 42px;
+    height: 17px;
+    margin-top: 26px;
+    margin-left: auto;
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.header .cadastrar {
+    width: 138px;
+    height: 40px;
+    margin-top: 16px;
+    margin-left: 70px;
+    margin-right: 68px;
+    color: var(--principal);
+    font-size: 14px;
+    font-weight: 600;
+    background-color: var(--branco);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.parte_1 {
+    width: 100%;
+    height: 390px;
+    background-color: var(--fundo_claro);
+    display: flex;
+    flex-direction: row;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.parte_1 h2 {
+    font-weight: 800;
+    font-size: 13px;
+    color: var(--principal);
+    margin-left: 65px;
+    margin-top: 50px;
+}
+
+.parte_1 h1 {
+    font-weight: 800;
+    font-size: 43px;
+    color: var(--preto);
+    margin-top: 10px;
+    margin-left: 65px;
+}
+
+.parte_1 h3 {
+    font-weight: 800;
+    font-size: 43px;
+    color: var(--principal);
+    margin-left: 65px;
+}
+
+.parte_1 p {
+    width: 458px;
+    min-height: 69px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: var(--neutro_secundario);
+    font-weight: 400;
+    margin-left: 65px;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-left: 65px;
+    margin-top: 20px;
+}
+
+.cadastrar_agora {
+    width: 176px;
+    height: 44px;
+    background-color: var(--principal);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastrar_agora:hover,
+.entrar_agora:hover {
+    transform: scale(1.08);
+    transition: all 0.3s;
+}
+
+.cadastrar_agora h5 {
+    color: var(--branco);
+}
+
+.entrar_agora {
+    width: 140px;
+    height: 44px;
+    background-color: var(--branco);
+    border-radius: 8px;
+    border: 1.2px var(--principal) solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entrar_agora h6 {
+    color: var(--principal);
+}
+
+.container-grafico {
+    width: 668px;
+    height: 314px;
+    background-color: var(--branco);
+    margin-top: 42px;
+    margin-left: auto;
+    margin-right: 65px;
+    border-radius: 20px;
+    border: 1px var(--suave) solid;
+}
+
+.header_grafico {
+    background-color: var(--principal);
+    width: calc(100% - 24px);
+    height: 46px;
+    border-radius: 12px;
+    margin-top: 12px;
+    margin-left: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo_branca_grafico {
+    width: 94px;
+    height: 30px;
+    margin-left: 16px;
+}
+
+.header_grafico .icone_user {
+    background-color: var(--branco);
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+}
+
+.header_grafico .nome_user {
+    color: var(--branco);
+    font-weight: 600;
+    font-size: 9px;
+    margin-right: 10px;
+}
+
+.header_grafico .icone_e_nome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.receita_despesa_saldo {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 12px;
+    gap: 8px;
+}
+
+.receita,
+.despesa,
+.saldo {
+    width: 194px;
+    height: 76px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.receita,
+.saldo {
+    background-color: var(--suave);
+}
+
+.despesa {
+    background-color: var(--fundo_cards);
+}
+
+.topo_card {
+    display: flex;
+    flex-direction: row;
+}
+
+.icone_receita,
+.icone_despesa {
+    width: 30px;
+    height: 30px;
+    margin-top: 12px;
+    margin-left: 12px;
+    border-radius: 100%;
+}
+
+.icone_receita {
+    background-color: var(--principal);
+}
+
+.icone_despesa {
+    background-color: var(--cards_despesas);
+}
+
+.nome_card {
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.RS {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: -10px;
+    margin-left: 52px;
+}
+
+.receita .RS,
+.saldo .RS {
+    color: var(--principal);
+}
+
+.despesa .RS {
+    color: var(--cards_despesas);
+}
+
+.descricao_card {
+    color: var(--neutro_secundario);
+    font-size: 7px;
+    font-weight: 400;
+    margin-left: 52px;
+}
+
+.grafico_1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.grafico_1 img {
+    width: 628px;
+    height: 136px;
+    object-fit: contain;
+}
+
+.parte_2 {
+    width: 100%;
+    height: 100%;
+}
+
+.parte_2 .titulo_pt2 {
+    color: var(--principal);
+    text-align: center;
+    font-weight: 800;
+    font-size: 11px;
+    margin-top: 50px;
+}
+
+.parte_2 h1 {
+    color: var(--preto);
+    text-align: center;
+    font-weight: 800;
+    font-size: 27px;
+    margin-top: 20px;
+}
+
+.parte_2 h3 {
+    color: var(--neutro_secundario);
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.quadrados {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.quadrado {
+    background-color: var(--fundo_claro);
+    width: 200px;
+    height: 158px;
+    margin-top: 30px;
+    border-radius: 12px;
+    padding-bottom: 15px;
+}
+
+.textos_quadrado {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: var(--principal);
+    font-weight: bold;
+}
+
+.textos_secundario_quadrado {
+    font-size: 11px;
+    width: 170px;
+    margin: 17px auto 0;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.parte_2 .texto2_pt2,
+.parte_2 .texto3_pt2,
+.texto_fim_pt2 {
+    color: var(--preto);
+    text-align: center;
+    font-weight: 800;
+    font-size: 27px;
+    margin-top: 50px;
+}
+
+.parte_2 .historico_de_lancamentos img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 40px auto;
+}
+
+.parte_2 .previsoes img {
+    width: 88%;
+    height: auto;
+    display: block;
+    margin: 40px auto;
+}
+
+.quadrados_azul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.quadrado_azul {
+    background-color: var(--fundo_beneficios);
+    width: 200px;
+    height: 158px;
+    margin-top: 50px;
+    border-radius: 12px;
+    padding-bottom: 15px;
+}
+
+.textos_quadrados_azul {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--cards_beneficios);
+}
+
+.textos_secundario_quadrados_azul {
+    font-size: 11px;
+    width: 170px;
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+footer {
+    margin-top: 100px;
+    background-color: var(--principal);
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+}
+
+/* responsividade do login e cadastro */
+
+@media (max-width: 768px) {
+    .pagina-login main,
+    .pagina-cadastro main {
+        flex-direction: column;
+    }
+
+    .pagina-login .esquerda,
+    .pagina-cadastro .esquerda {
+        display: none;
+    }
+
+    .pagina-login .direita,
+    .pagina-cadastro .direita {
+        width: 100%;
+        min-height: 100vh;
+        background-image: url('../img/imagem_esquerda.png');
+        background-size: 100% 60%;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+
+    .pagina-login .formulario,
+    .pagina-cadastro .formulario {
+        width: 86%;
+        margin-top: 40px;
+        background-color: var(--branco);
+        padding: 33px;
+        min-height: 495px;
+    }
+}
+
+@media (max-width: 426px) {
+    .pagina-login .logo_centro img,
+    .pagina-cadastro .logo_centro img {
+        width: 160px;
+    }
+
+    .pagina-login .formulario,
+    .pagina-cadastro .formulario {
+        width: 86%;
+        margin-top: 80px;
+        padding: 25px;
+    }
+
+    .pagina-login .formulario h1,
+    .pagina-cadastro .formulario h1 {
+        font-size: 18px;
+    }
+
+    .pagina-login .direita p,
+    .pagina-cadastro .direita p {
+        font-size: 9px;
+    }
+}
+
+/* responsividade das paginas internas */
+
+@media (max-width: 768px) {
+    .inicio_relatorio_previsao {
+        gap: 23px;
+    }
+
+    .header .logo_branca {
+        width: 60px;
+    }
+
+    .header .icone_e_nome {
+        margin-left: 30px;
+        margin-right: 20px;
+    }
+
+    .pagina-editar-perfil .campos {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 426px) {
+    .pagina-dashboard .inicio_relatorio_previsao {
+        display: none;
+    }
+
+    .pagina-dashboard .header .icone_e_nome {
+        margin-left: auto;
+    }
+
+    .pagina-dashboard .menu {
+        display: flex;
+    }
+
+    .pagina-editar-perfil .header {
+        display: none;
+    }
+
+    .pagina-editar-perfil .menu {
+        display: flex;
+    }
+
+    .pagina-editar-perfil .container {
+        min-height: 100vh;
+    }
+
+    .pagina-editar-perfil .campos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pagina-editar-perfil .coluna_esquerda,
+    .pagina-editar-perfil .coluna_direita {
+        width: 90%;
+    }
+
+    .pagina-editar-perfil form {
+        width: 90%;
+    }
+
+    .pagina-editar-perfil button {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 6px;
+    }
+}
+
+/* responsividade da landing page */
+
+/* ajuste entre 1026px e 1100px */
+@media (min-width: 1026px) and (max-width: 1100px) {
+    .conteudo {
+        width: 47%;
+    }
+
+    .container-grafico {
+        width: 48%;
+        height: auto;
+        margin-right: 30px;
+    }
+
+    .grafico_1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .receita,
+    .despesa,
+    .saldo {
+        width: 32%;
+    }
+}
+
+
+/* ajustando os cards do grafico */
+@media (min-width: 801px) and (max-width: 1280px) {
+    .icone_receita,
+    .icone_despesa {
+        width: 24px;
+        height: 24px;
+        margin-left: 8px;
+        margin-top: 8px;
+    }
+
+    .nome_card {
+        font-size: 8px;
+        margin-left: 6px;
+        margin-top: 11px;
+    }
+
+    .RS {
+        font-size: 13px;
+        margin-left: 8px;
+        margin-top: 2px;
+    }
+
+    .descricao_card {
+        font-size: 5px;
+        margin-left: 8px;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1025px) {
+    .pagina-index .header img {
+        width: 130px;
+        height: auto;
+        margin-left: 30px;
+    }
+
+    .header .cadastrar {
+        margin-left: 35px;
+        margin-right: 30px;
+    }
+
+    .parte_1 {
+        height: auto;
+        padding-bottom: 35px;
+    }
+
+    .conteudo {
+        width: 47%;
+    }
+
+    .parte_1 h2 {
+        margin-left: 30px;
+        margin-top: 40px;
+    }
+
+    .parte_1 h1,
+    .parte_1 h3 {
+        margin-left: 30px;
+        font-size: 32px;
+    }
+
+    .parte_1 p {
+        width: auto;
+        height: auto;
+        margin-left: 30px;
+        margin-right: 15px;
+        font-size: 13px;
+    }
+
+    .botoes {
+        margin-left: 30px;
+        gap: 15px;
+    }
+
+    .cadastrar_agora {
+        width: 150px;
+    }
+
+    .entrar_agora {
+        width: 115px;
+    }
+
+    .container-grafico {
+        width: 48%;
+        height: auto;
+        margin-left: auto;
+        margin-right: 25px;
+        margin-top: 42px;
+    }
+
+    .receita,
+    .despesa,
+    .saldo {
+        width: 32%;
+    }
+
+    .grafico_1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .parte_2 h1 {
+        font-size: 25px;
+    }
+
+    .parte_2 h3 {
+        font-size: 14px;
+    }
+
+    .quadrado {
+        width: 27%;
+        min-width: 200px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 800px) {
+    .pagina-index .header img {
+        width: 115px;
+        height: auto;
+        margin-left: 20px;
+    }
+
+    .header .entrar {
+        font-size: 12px;
+    }
+
+    .header .cadastrar {
+        width: 110px;
+        height: 36px;
+        margin-left: 25px;
+        margin-right: 20px;
+        font-size: 12px;
+    }
+
+    .parte_1 {
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .conteudo {
+        width: 47%;
+    }
+
+    .parte_1 h2 {
+        margin-left: 20px;
+        margin-top: 35px;
+        font-size: 11px;
+    }
+
+    .parte_1 h1,
+    .parte_1 h3 {
+        margin-left: 20px;
+        font-size: 28px;
+    }
+
+    .parte_1 p {
+        width: auto;
+        height: auto;
+        margin-left: 20px;
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    .botoes {
+        margin-left: 20px;
+        gap: 10px;
+    }
+
+    .cadastrar_agora {
+        width: 135px;
+        height: 40px;
+    }
+
+    .entrar_agora {
+        width: 100px;
+        height: 40px;
+    }
+
+    .container-grafico {
+        width: 49%;
+        height: auto;
+        margin-left: auto;
+        margin-right: 15px;
+        margin-top: 35px;
+    }
+
+    .receita,
+    .despesa,
+    .saldo {
+        width: 32%;
+        height: 70px;
+    }
+
+    .icone_receita,
+    .icone_despesa {
+        width: 20px;
+        height: 20px;
+        margin-left: 7px;
+        margin-top: 7px;
+    }
+
+    .nome_card {
+        font-size: 7px;
+        margin-left: 5px;
+        margin-top: 9px;
+    }
+
+    .RS {
+        font-size: 10px;
+        margin-left: 7px;
+        margin-top: 3px;
+    }
+
+    .descricao_card {
+        font-size: 4px;
+        margin-left: 7px;
+    }
+
+    .grafico_1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .parte_2 h1 {
+        font-size: 23px;
+    }
+
+    .parte_2 h3 {
+        font-size: 13px;
+    }
+
+    .quadrado,
+    .quadrado_azul {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pagina-index .header {
+        height: 60px;
+        align-items: center;
+    }
+
+    .pagina-index .header img {
+        width: 110px;
+        height: auto;
+        margin-left: 20px;
+        margin-top: 0;
+    }
+
+    .header .entrar {
+        margin-top: 0;
+        font-size: 12px;
+    }
+
+    .header .cadastrar {
+        width: 105px;
+        height: 34px;
+        margin-left: 25px;
+        margin-right: 20px;
+        margin-top: 0;
+        font-size: 11px;
+    }
+
+    .parte_1 {
+        height: auto;
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+
+    .conteudo {
+        width: 100%;
+    }
+
+    .parte_1 h2,
+    .parte_1 h1,
+    .parte_1 h3,
+    .parte_1 p {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .parte_1 h2 {
+        margin-top: 30px;
+    }
+
+    .parte_1 h1,
+    .parte_1 h3 {
+        font-size: 30px;
+    }
+
+    .parte_1 p {
+        width: auto;
+        height: auto;
+    }
+
+    .botoes {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .container-grafico {
+        width: 90%;
+        height: auto;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .receita,
+    .despesa,
+    .saldo {
+        width: 32%;
+    }
+
+    .RS {
+        margin-left: 8px;
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .descricao_card {
+        margin-left: 8px;
+        font-size: 5px;
+    }
+
+    .grafico_1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .parte_2 h1 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .parte_2 h3 {
+        font-size: 13px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .quadrados,
+    .quadrados_azul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quadrado,
+    .quadrado_azul {
+        width: 80%;
+    }
+
+    .parte_2 .historico_de_lancamentos img,
+    .parte_2 .previsoes img {
+        width: 92%;
+    }
+}
+
+@media (max-width: 426px) {
+    .pagina-index .header img {
+        width: 95px;
+        margin-left: 15px;
+    }
+
+    .header .entrar {
+        font-size: 10px;
+    }
+
+    .header .cadastrar {
+        width: 90px;
+        height: 32px;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 10px;
+    }
+
+    .parte_1 h1,
+    .parte_1 h3 {
+        font-size: 28px;
+    }
+
+    .parte_1 p {
+        font-size: 14px;
+    }
+
+    .botoes {
+        gap: 10px;
+    }
+
+    .cadastrar_agora {
+        width: 165px;
+    }
+
+    .entrar_agora {
+        width: 125px;
+    }
+
+    .container-grafico {
+        width: 92%;
+    }
+
+    .logo_branca_grafico {
+        width: 80px;
+        height: auto;
+    }
+
+    .header_grafico .icone_user {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header_grafico .nome_user {
+        font-size: 7px;
+    }
+
+    .nome_card {
+        font-size: 8px;
+    }
+
+    .RS {
+        font-size: 11px;
+    }
+
+    .descricao_card {
+        font-size: 4.5px;
+    }
+
+    .parte_2 h1 {
+        font-size: 23px;
+    }
+
+    .parte_2 h3 {
+        font-size: 12px;
+    }
+
+    .quadrado,
+    .quadrado_azul {
+        width: 85%;
+    }
+}
+
+@media (max-width: 376px) {
+    .pagina-index .header img {
+        width: 90px;
+    }
+
+    .header .cadastrar {
+        width: 85px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .parte_1 h1,
+    .parte_1 h3 {
+        font-size: 26px;
+    }
+
+    .parte_1 p {
+        font-size: 13px;
+    }
+
+    .cadastrar_agora {
+        width: 155px;
+    }
+
+    .entrar_agora {
+        width: 115px;
+    }
+
+    .nome_card {
+        font-size: 7px;
+    }
+
+    .RS {
+        font-size: 10px;
+    }
+
+    .descricao_card {
+        font-size: 4px;
+    }
+
+    .parte_2 h1 {
+        font-size: 21px;
+    }
+
+    .parte_2 h3 {
+        font-size: 11px;
+    }
+
+    .quadrado,
+    .quadrado_azul {
+        width: 88%;
+    }
+}
+
+@media (max-width: 321px) {
+    .pagina-index .header img {
+        width: 80px;
+        margin-left: 10px;
+    }
+
+    .header .entrar {
+        font-size: 9px;
+    }
+
+    .header .cadastrar {
+        width: 75px;
+        height: 30px;
+        margin-left: 8px;
+        margin-right: 8px;
+        font-size: 9px;
+    }
+
+    .parte_1 h1,
+    .parte_1 h3 {
+        font-size: 23px;
+    }
+
+    .parte_1 p {
+        font-size: 12px;
+    }
+
+    .botoes {
+        margin-left: 15px;
+        margin-right: 15px;
+        gap: 7px;
+    }
+
+    .cadastrar_agora {
+        width: 145px;
+        height: 40px;
+    }
+
+    .entrar_agora {
+        width: 105px;
+        height: 40px;
+    }
+
+    .container-grafico {
+        width: 94%;
+    }
+
+    .logo_branca_grafico {
+        width: 72px;
+    }
+
+    .icone_receita,
+    .icone_despesa {
+        width: 18px;
+        height: 18px;
+    }
+
+    .nome_card {
+        font-size: 6px;
+    }
+
+    .RS {
+        font-size: 9px;
+        margin-left: 6px;
+    }
+
+    .descricao_card {
+        font-size: 3.8px;
+        margin-left: 6px;
+    }
+
+    .parte_2 h1 {
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .parte_2 h3 {
+        font-size: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .quadrado,
+    .quadrado_azul {
+        width: 90%;
+    }
+
+    footer {
+        margin-top: 70px;
+    }
+}
+/* O link Início mantém a cor do menu existente. */
+.menu .inicio {
+    color: var(--branco);
+}
+
+.pagina-dashboard h1 {
+}
+
+/* responsividade editar senha */
+
+@media (max-width: 768px) {
+
+    .pagina-editar-senha .container-senha {
+        width: 100%;
+        margin-top: 50px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .pagina-editar-senha .container-senha form {
+        width: 350px;
+    }
+}
+
+@media (max-width: 426px) {
+
+    .pagina-editar-senha {
+        background-color: var(--fundo_claro);
+    }
+
+    .pagina-editar-senha .header {
+        display: none;
+    }
+
+    .pagina-editar-senha .container-senha {
+        width: 100%;
+        margin-top: 0;
+        padding-top: 45px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 90px;
+    }
+
+    .pagina-editar-senha .container-senha form {
+        width: 100%;
+        background-color: var(--branco);
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .pagina-editar-senha .container-senha label {
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .pagina-editar-senha .container-senha input {
+        width: 100%;
+        height: 36px;
+        font-size: 13px;
+    }
+
+    .pagina-editar-senha .atualizar {
+        width: 100%;
+        height: 38px;
+        margin-top: 22px;
+        font-size: 12px;
+    }
+
+    .pagina-editar-senha .menu {
+        width: 100%;
+        height: 64px;
+        display: flex;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background-color: var(--principal);
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .pagina-editar-senha .menu div,
+    .pagina-editar-senha .menu .inicio {
+        width: 33.33%;
+        height: 64px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pagina-editar-senha .menu img {
+        width: 22px;
+        height: 22px;
+        margin: 0;
+        display: block;
+    }
+
+    .pagina-editar-senha .menu p {
+        width: 100%;
+        margin: 4px 0 0;
+        padding: 0;
+        text-align: center;
+        font-size: 9px;
+        line-height: 10px;
+        color: var(--branco);
+    }
+}
+
+@media (max-width: 376px) {
+
+    .pagina-editar-senha .container-senha {
+        padding-top: 35px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .pagina-editar-senha .container-senha form {
+        padding: 18px;
+    }
+
+    .pagina-editar-senha .container-senha input {
+        height: 34px;
+    }
+}
+
+@media (max-width: 321px) {
+
+    .pagina-editar-senha .container-senha {
+        padding-top: 25px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .pagina-editar-senha .container-senha form {
+        padding: 15px;
+    }
+
+    .pagina-editar-senha .container-senha label {
+        font-size: 11px;
+    }
+
+    .pagina-editar-senha .container-senha input {
+        height: 32px;
+    }
+
+    .pagina-editar-senha .atualizar {
+        height: 35px;
+    }
+
+    .pagina-editar-senha .menu {
+        height: 58px;
+    }
+
+    .pagina-editar-senha .menu div,
+    .pagina-editar-senha .menu .inicio {
+        height: 58px;
+    }
+
+    .pagina-editar-senha .menu img {
+        width: 19px;
+        height: 19px;
+    }
+
+    .pagina-editar-senha .menu p {
+        font-size: 8px;
+        margin-top: 3px;
+    }
+}

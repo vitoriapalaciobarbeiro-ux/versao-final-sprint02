@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/estilo.css') }}"
+    >
+    <title>Editar senha</title>
+</head>
+<body class="pagina-editar-senha">
+    <div class="header">
+        <img class="logo_branca" src="{{ url_for('static', filename='img/logo_branca.png') }}" alt="Logo Branca">
+
+        <div class="inicio_relatorio_previsao">
+            <a href="{{ url_for('dashboard') }}">Início</a>
+            <p>Relatório</p>
+            <p>Previsão</p>
+        </div>
+
+        <div class="icone_e_nome">
+            <div class="icone_user"></div>
+            <a href="{{ url_for('editar_usuario') }}"><p class="nome_user">Olá, {{nome}}</p></a>
+            <a href="{{ url_for('logout') }}" class="logout"><img src="{{ url_for('static', filename='img/logout.png') }}" alt="Símbolo da logo"></a>
+        </div>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {%for category, message in messages %}
+            <div class="flash {{category}}">{{message}}</div>
+            {%endfor%}
+        </div>
+        {%endif%}
+    {%endwith%}
+    <div class="container-senha">
+        <form action="{{ url_for('senha') }}" method="post">
+            <label class="senhas">Senha Atual</label>
+            <input name="senha_atual" type="password" required>
+
+            <label class="senhas">Nova Senha</label>
+            <input name="nova_senha" type="password" required>
+
+            <label class="senhas">Confirmar senha</label>
+            <input name="confirma_senha" type="password" required>
+            
+            <button type="submit" class="atualizar">ATUALIZAR</button>
+        </form>
+    </div>
+
+    <div class="menu">
+        <a class="inicio" href="{{ url_for('dashboard') }}">
+            <img src="{{ url_for('static', filename='img/casinha.png') }}">
+            <p>Início</p>
+        </a>
+
+
+        <div>
+            <img class="relatorios" src="{{ url_for('static', filename='img/setas.png') }}">
+            <p>Relatórios</p>
+        </div>
+
+
+        <div>
+            <img class="previsoes" src="{{ url_for('static', filename='img/previsoes_logo.png') }}">
+            <p>Previsões</p>
+        </div>
+    </div>
+</body>
+</html>

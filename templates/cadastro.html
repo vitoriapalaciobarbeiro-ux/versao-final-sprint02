@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+
+<body class="pagina-cadastro">
+    <main>
+        <div class="esquerda">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+                <p>Seu trabalho, seu controle</p>
+            </div>
+        </div>
+        <div class="direita">
+
+            <div class="formulario">
+                <div class="logo_centro">
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="">
+                </div>
+
+                <h1>Bem-vindo!</h1>
+
+                <p>Faça seu cadastro para poder usar o Meu Salário</p>
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% endwith %}
+
+                <form action="{{ url_for('cadastrar') }}" method="post">
+
+                    <label>Nome</label>
+                    <input name="nome" type="text" maxlength="254" required>
+
+                    <label>E-mail</label>
+                    <input name="email" type="email" maxlength="254" required>
+
+                    <label>Senha</label>
+                    <input name="senha" type="password" required>
+
+                    <label>Confirmar Senha</label>
+                    <input name="confirmar" type="password" required>
+
+                    <button type="submit">CADASTRAR</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+<body class="pagina-dashboard">
+    <div class="header">
+        <img class="logo_branca" src="{{ url_for('static', filename='img/logo_branca.png') }}" alt="">
+
+        <div class="inicio_relatorio_previsao">
+            <p>Início</p>
+            <p>Relatório</p>
+            <p>Previsão</p>
+        </div>
+
+        <div class="icone_e_nome">
+            <div class="icone_user"></div>
+            <a href="{{ url_for('editar_usuario') }}"><p class="nome_user">Olá, {{nome}}</p></a>
+            <a href="{{ url_for('logout') }}" class="logout"><img src="{{ url_for('static', filename='img/logout.png') }}" alt="Símbolo de sair"></a>
+        </div>
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {%for category, message in messages %}
+            <div class="flash {{category}}">{{message}}</div>
+            {%endfor%}
+        </div>
+        {%endif%}
+    {%endwith%}
+    
+    <div>
+        <h1>Bem-vindo {{nome}} !</h1>
+    </div>
+
+        <div class="menu">
+        <a class="inicio" href="{{ url_for('dashboard') }}">
+            <img src="{{ url_for('static', filename='img/casinha.png') }}">
+            <p>Início</p>
+        </a>
+
+
+        <div>
+            <img class="relatorios" src="{{ url_for('static', filename='img/setas.png') }}">
+            <p>Relatórios</p>
+        </div>
+
+
+        <div>
+            <img class="previsoes" src="{{ url_for('static', filename='img/previsoes_logo.png') }}">
+            <p>Previsões</p>
+        </div>
+    </div>
+</body>
+</html>
